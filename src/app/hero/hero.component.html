@@ -1,0 +1,20 @@
+<div class="row">
+  <div class="col-md-5">
+    <h2>英雄列表</h2>
+    <ul class="list-group">
+      <!--  <li *ngFor="let hero of heroes | async">{{ hero.name }}</li> -->
+      <li
+        class="list-group-item"
+        *ngFor="let hero of heroes"
+        (click)="showTaxReturn(hero)"
+      >
+        {{ hero.name }}
+      </li>
+    </ul>
+  </div>
+</div>
+<app-hero-tex-return
+  *ngFor="let htr of selectedTaxReturns; let i = index"
+  [taxReturn]="htr"
+  (close)="closeTaxReturn(i)"
+></app-hero-tex-return>

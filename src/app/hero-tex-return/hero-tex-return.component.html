@@ -1,0 +1,21 @@
+<div class="tax-return">
+  <div class="msg" [class.canceled]="message === Canceled">
+    {{ message }}
+  </div>
+  <fieldset>
+    <span id="name">{{ taxReturn.name }}</span>
+    <label id="tid">{{ taxReturn.tid }}</label>
+  </fieldset>
+  <fieldset>
+    Income:
+    <input [(ngModel)]="taxReturn.income" class="num" />
+  </fieldset>
+  <fieldset>
+    <label id="tax">Tax: {{ taxReturn.tax }}</label>
+  </fieldset>
+  <fieldset>
+    <button (click)="save()">保存</button>
+    <button (click)="cancle()">返回</button>
+    <button (click)="onClose()">关闭</button>
+  </fieldset>
+</div>

@@ -1,0 +1,42 @@
+.tax-return {
+  border: thin dashed green;
+  margin: 1em;
+  padding: 1em;
+  width: 18em;
+  position: relative;
+}
+
+#name {
+  font-weight: bold;
+}
+#tid {
+  float: right;
+}
+input {
+  font-size: 100%;
+  padding-left: 2px;
+  width: 6em;
+  .num {
+    text-align: right;
+    padding-left: 0;
+    padding-right: 4px;
+    width: 4em;
+  }
+}
+fieldset {
+  border: 0 none;
+}
+
+.msg {
+  color: white;
+  font-size: 150%;
+  position: absolute;
+  left: 2px;
+  top: 3em;
+  background-color: green;
+  text-align: center;
+  .canceled {
+    color: white;
+    background-color: red;
+  }
+}
